@@ -11,13 +11,12 @@ def adicionarValores(dados, id, informacoes,  nomes):
             for informacao, nome in zip(informacoes, nomes):
                 dados_id[nome] = informacao
 
-def parser(nome):
+def parser(arquivo):
     dados = {}
     nomes = []
     indice = 0
 
-    with open(nome, 'r') as arquivo:
-        for linha in arquivo:
+    for linha in arquivo:
             informacoes = linha.strip().split(',')
             if indice != 0:
                 if informacoes:

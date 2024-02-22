@@ -1,8 +1,11 @@
 from tpc1 import parser, getModalidadesOrdenada, percentagemAtletasAptos, escalaoEtario
+import sys
 
 def main():
-    nome_do_arquivo = "emd.csv" 
-    dados = parser(nome_do_arquivo)
+    
+    conteudo =  sys.stdin
+    print(conteudo)
+    dados = parser(conteudo)
     modalidades = getModalidadesOrdenada(dados)
     print("Modalidades: ", modalidades)
     
